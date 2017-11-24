@@ -1,0 +1,1094 @@
+html a {
+    color: #666;
+}
+
+#header {
+    background: url("../images/headerbg.png") repeat-x 0 0;
+    height: 105px;
+}
+
+#header .contWidth {
+    width: 990px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+}
+
+.contWidth .logo {
+    float: left;
+    margin-left: 10px;
+    line-height: 80px;
+}
+
+.contWidth .search {
+    position: absolute;
+    left: 198px;
+    top: 20px;
+}
+
+.contWidth .search input {
+    width: 260px;
+    height: 20px;
+    padding: 5px;
+}
+
+.skin {
+    float: right;
+    margin: 10px;
+    width: 120px;
+}
+
+.skin li {
+    margin-right: 4px;
+    width: 15px;
+    height: 15px;
+    text-indent: -9999px;
+    cursor: pointer;
+    float: left;
+    background: url("../images/theme.gif");
+}
+
+li#skin_0 {
+    background-position: 0 0;
+}
+
+li#skin_1 {
+    background-position: 15px 0;
+}
+
+li#skin_2 {
+    background-position: 35px 0;
+}
+
+li#skin_3 {
+    background-position: 55px 0;
+}
+
+li#skin_4 {
+    background-position: 75px 0;
+}
+
+li#skin_5 {
+    background-position: 95px 0;
+}
+
+li#skin_0.selected {
+    background-position: 0 15px;
+}
+
+li#skin_1.selected {
+    background-position: 15px 15px;
+}
+
+li#skin_2.selected {
+    background-position: 35px 15px;
+}
+
+li#skin_3.selected {
+    background-position: 55px 15px;
+}
+
+li#skin_4.selected {
+    background-position: 75px 15px;
+}
+
+li#skin_5.selected {
+    background-position: 95px 15px;
+}
+
+.mainNav {
+    height: 37px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #4a4a4a;
+}
+
+.mainNav ul.firstNav {
+    height: 100%;
+    margin-left: 20px;
+    line-height: 37px;
+}
+
+.mainNav ul.firstNav li {
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+
+.firstNav li>a {
+    float: left;
+    text-align: center;
+    width: 80px;
+    height: 100%;
+    color: #eee;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.firstNav li>a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    -webkit-transform: scale(0, 1);
+    -moz-transform: scale(0, 1);
+    transform: scale(0, 1);
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    -webkit-transition: transform .5s ease-in-out;
+    -moz-transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+}
+
+.firstNav li:hover a::before {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.firstNav li:hover .subitem {
+    display: block;
+}
+
+.firstNav li .subitem {
+    position: absolute;
+    top: 37px;
+    width: 450px;
+    background: #eee;
+    border: 1px solid #b1b1b1;
+    border-top: none;
+    padding: 15px;
+    display: none;
+}
+
+.subitem>i {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #b1b1b1 transparent;
+    top: -12px;
+    left: 31px;
+}
+
+.subitem>i::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+    top: -5px;
+    left: -6px;
+}
+
+.subitem .firstRow {
+    border-bottom: 1px dashed #b1b1b1;
+}
+
+.subitem .secondRow {
+    padding-top: 15px;
+}
+
+.subitem dl {
+    padding: 0 10px 10px 10px;
+    float: left;
+}
+
+.subitem dl dt {
+    float: left;
+    width: 76px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.subitem dl dd {
+    float: left;
+    width: 354px;
+}
+
+.subitem dl dd a {
+    margin-bottom: 10px;
+    float: left;
+    line-height: 15px;
+    height: 15px;
+    width: 45px;
+    text-align: center;
+    color: #555;
+    border-right: 1px solid #999;
+}
+
+.subitem dl dd a:hover {
+    color: #FF0022;
+}
+
+#content {
+    margin: 0 auto;
+    width: 990px;
+    position: relative;
+}
+
+.janeshop {
+    height: 560px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.janeshop .jnCatalog {
+    float: left;
+    height: 100%;
+    width: 187px;
+    padding-right: 11px;
+}
+
+.janeshop .jnImagescroll {
+    float: left;
+    height: 320px;
+    margin-right: 11px;
+    position: relative;
+    width: 550px;
+}
+
+.janeshop .jnNotice {
+    float: left;
+    height: 321px;
+    width: 230px;
+}
+
+.janeshop .jnBrand {
+    float: left;
+    height: 230px;
+    margin-top: 10px;
+    width: 790px;
+}
+
+.janeshop .lifeInstitute {
+    float: left;
+    width: 968px;
+    height: 126px;
+    margin-top: 10px;
+    padding: 20px 0 20px 20px;
+    border: 1px solid #eee;
+}
+
+.jnCatalog h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    line-height: 30px;
+    height: 30px;
+    background: -moz-linear-gradient(#bbb, #333);
+    background: -webkit-gradient(linear, center top, center bottom, from(#bbb), to(#333));
+    background: -webkit-linear-gradient(#bbb, #333);
+    background: -o-linear-gradient(#bbb, #333);
+    background: -ms-linear-gradient(#bbb, #333);
+    background: linear-gradient(#bbb, #333);
+}
+
+.jnCatalog .jnCatalog-wrapper {
+    height: 530px;
+    padding: 0 5px;
+}
+
+.jnCatalog .items {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.jnCatalog .items .preShow {
+    z-index: 100;
+}
+
+.jnCatalog .items .preShow::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 187px;
+    height: 30px;
+    background: #eee;
+    z-index: -2;
+}
+
+.jnCatalog .items .preShow::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 187px;
+    height: 30px;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transform: rotate3d(0, 1, 0, -90deg);
+    transform: rotate3d(0, 1, 0, -90deg);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    background: -moz-linear-gradient(#A974F8, #8224FD);
+    background: -webkit-gradient(linear, center top, center bottom, from(#A974F8), to(#8224FD));
+    background: -webkit-linear-gradient(#A974F8, #8224FD);
+    background: -o-linear-gradient(#A974F8, #8224FD);
+    background: -ms-linear-gradient(#A974F8, #8224FD);
+    background: linear-gradient(#A974F8, #8224FD);
+    -moz-transform: rotate3d(0, 1, 0, -90deg);
+    -ms-transform: rotate3d(0, 1, 0, -90deg);
+    -o-transform: rotate3d(0, 1, 0, -90deg);
+}
+
+.jnCatalog .items:hover .preShow::after {
+    opacity: 1;
+    -webkit-transform: rotate3d(0, 1, 0, 0deg);
+    transform: rotate3d(0, 1, 0, 0deg);
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    -moz-transform: rotate3d(0, 1, 0, 0deg);
+    -ms-transform: rotate3d(0, 1, 0, 0deg);
+    -o-transform: rotate3d(0, 1, 0, 0deg);
+}
+
+.jnCatalog .items:hover .preShow,
+.jnCatalog .items:hover .preShow>a {
+    color: #fff;
+}
+
+.jnCatalog .items:hover .detail {
+    display: block;
+}
+
+.jnCatalog .items .preShow>i {
+    float: right;
+    -webkit-transform: scale(.6, .6);
+    transform: scale(.6, .6);
+}
+
+.items .detail a:hover {
+    color: #8224FD;
+}
+
+.items .detail {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    left: 187px;
+    top: 10px;
+    background: #fff;
+    width: 700px;
+    height: 530px;
+    border: 1px solid #eee;
+    box-shadow: -1px -1px 2px rgba(0, 0, 0, .2), 1px 1px 2px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    padding: 20px;
+}
+
+.items .detail .text-wrapper {
+    float: left;
+}
+
+.items .detail .text-category {
+    width: 450px;
+    height: 160px;
+    margin-bottom: 10px;
+}
+
+.detail .text-category>div {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.detail .text-category>div a:nth-child(1) {
+    float: left;
+    font-size: 20px;
+    color: #666;
+}
+
+.detail .text-category>div a:nth-child(2) {
+    float: right;
+    color: #666;
+}
+
+.detail .text-category>div a i::before {
+    font-size: 12px;
+}
+
+.text-category ul li {
+    float: left;
+    width: 40px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.text-category ul li>a.highlight {
+    color: orangered;
+}
+
+.text-category ul li a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    line-height: 25px;
+}
+
+.detail .pro-recommend {
+    float: right;
+    width: 240px;
+}
+
+.detail .pro-recommend p {
+    width: 100%;
+    text-align: center;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+}
+
+.detail .pro-recommend>ul {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+}
+
+.detail .pro-recommend>ul li {
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.pro-recommend>ul li a:nth-child(1) {
+    float: left;
+    position: relative;
+    height: 100px;
+}
+
+.pro-recommend>ul li a:nth-child(1)::after {
+    content: "亲";
+    position: absolute;
+    left: 0;
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    width: 100px;
+    height: 100px;
+    transition: transform .3s ease-in-out;
+    background: rgba(255, 255, 255, 0.52);
+    -webkit-transition: transform .3s ease-in-out;
+    -moz-transition: transform .3s ease-in-out;
+    -ms-transition: transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
+}
+
+.pro-recommend>ul li a:nth-child(1):hover::after {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+}
+
+.pro-recommend>ul li a:nth-child(2) {
+    float: left;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.janeshop .jnImagescroll .imgWrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.janeshop .jnImagescroll .imgWrap a {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.janeshop .jnImagescroll .textGuide {
+    position: absolute;
+    bottom: -1px;
+    z-index: 100;
+}
+
+.janeshop .jnImagescroll .textGuide a {
+    position: relative;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    float: left;
+    margin-right: 1px;
+    padding: 5px 15px;
+    height: 32px;
+    width: 79px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.jnImagescroll .textGuide a span {
+    display: block;
+    height: 16px;
+    line-height: 16px;
+}
+
+.jnImagescroll .textGuide a.current i {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    border-width: 5px;
+}
+
+.jnImagescroll .textGuide a.current {
+    background: rgba(55, 167, 215, 0.51);
+}
+
+.jnNotice .jnMiaosha {
+    float: left;
+    height: 176px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.jnNotice .jnMiaosha a {
+    display: inline-block;
+}
+
+@-webkit-keyframes rotateIn {
+    0% {
+        transform-origin: center;
+        -webkit-transform: rotate(-100deg);
+        transform: rotate(-100deg);
+    }
+    0%,
+    to {
+        -webkit-transform-origin: center;
+    }
+    50% {
+        transform-origin: center;
+        -webkit-transform: rotate(100deg);
+        transform: rotate(100deg);
+    }
+    to {
+        transform-origin: center;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes rotateIn {
+    0% {
+        transform-origin: center;
+        -webkit-transform: rotate(-100deg);
+        transform: rotate(-100deg);
+    }
+    0%,
+    to {
+        -webkit-transform-origin: center;
+    }
+    50% {
+        transform-origin: center;
+        -webkit-transform: rotate(100deg);
+        transform: rotate(100deg);
+    }
+    to {
+        transform-origin: center;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.jnNotice .jnMiaosha a:hover {
+    animation: rotateIn .5s ease-in-out;
+}
+
+.jnNotice .jnNoticeInfo {
+    float: left;
+    border: 1px dashed #999;
+    height: 133px;
+    width: 228px;
+    overflow: hidden;
+}
+
+.jnNotice .jnNoticeInfo .title {
+    height: 26px;
+    line-height: 26px;
+    border-bottom: 1px dashed #999;
+    text-indent: 10px;
+}
+
+.jnNotice .jnNoticeInfo .title span {
+    font-weight: 700;
+}
+
+.jnNotice .jnNoticeInfo .title a {
+    float: right;
+    margin-right: 10px;
+}
+
+.jnNotice .jnNoticeInfo .textScroll {
+    padding-left: 10px;
+}
+
+.jnNotice .jnNoticeInfo .textScroll li {
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 1px;
+}
+
+.jnNoticeInfo a:hover {
+    color: #8224FD;
+}
+
+.jnBrand .jnBrandTab {
+    width: 100%;
+    height: 29px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.jnBrand .jnBrandTab h3 {
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 10px;
+}
+
+.jnBrand .jnBrandTab ul {
+    float: right;
+}
+
+.jnBrand .jnBrandTab ul li {
+    float: left;
+}
+
+.jnBrandTab ul li a {
+    display: inline-block;
+    width: 50px;
+    height: 29px;
+    background: #e4e4e4;
+    text-align: center;
+    line-height: 29px;
+    margin-left: 5px;
+    position: relative;
+}
+
+.jnBrandTab ul li a:hover {
+    background: #fa5889;
+    color: #fff;
+    text-decoration: none;
+}
+
+.jnBrandTab ul li a.current {
+    background: #fa5889;
+    color: #fff;
+}
+
+.jnBrandTab ul li a.current::after {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -5px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-color: #fa5889 transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.jnBrand .jnBrandContent {
+    width: 790px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin: 8px 0;
+    /* padding: 0 5px; */
+}
+
+.jnBrand .jnBrandContent .jnBrandList {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3200px;
+}
+
+.jnBrand .jnBrandContent .jnBrandList li {
+    float: left;
+    height: 200px;
+    padding: 0 6px;
+    width: 186px;
+}
+
+.jnBrandContent .jnBrandList li a:nth-child(2) {
+    display: inline-block;
+    width: 183px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background: #eee;
+}
+
+.jnBrandContent .jnBrandList li a:nth-child(1) {
+    display: inline-block;
+}
+
+.jnBrandList li a:nth-child(1) i {
+    display: none;
+    position: absolute;
+    color: black;
+    font-size: 22px;
+    text-align: center;
+    line-height: 164px;
+    width: 183px;
+    height: 164px;
+    opacity: .4;
+    filter: alpha(opacity=40);
+    background: #fff;
+}
+
+.jnBrandList li a:nth-child(1):hover i {
+    display: block;
+}
+
+.janeshop .lifeInstitute .title {
+    padding: 0 10px;
+    height: 24px;
+}
+
+.janeshop .lifeInstitute .title img {
+    float: left;
+    width: 90px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.janeshop .lifeInstitute .title span {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    color: #999;
+}
+
+.janeshop .lifeInstitute .content {
+    width: 100%;
+    height: 82px;
+    margin-top: 20px;
+}
+
+.janeshop .lifeInstitute .content a {
+    float: left;
+    height: 100%;
+    width: 192px;
+}
+
+.lifeInstitute .content a img {
+    float: left;
+    border: 1px solid #13d0a1;
+    border-radius: 50%;
+}
+
+.lifeInstitute .content a:hover img {
+    border: 1px solid #Ff9B1C;
+    -webkit-filter: brightness(1.1);
+}
+
+.lifeInstitute .content a .text {
+    float: left;
+    margin-left: 10px;
+}
+
+.content a .text h4 {
+    font-size: 16px;
+}
+
+.lifeInstitute .content a:hover .text h4 {
+    color: #Ff9B1C;
+}
+
+.content a .text p:nth-child(2) {
+    color: #999;
+    font-size: 14px;
+}
+
+.content a .text p:nth-child(3) {
+    color: #999;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.content a .text p:nth-child(3) i {
+    color: #13d0a1;
+}
+
+.recommendGoods {
+    width: 448px;
+    height: 670px;
+    margin-top: 10px;
+    border: 1px solid #eee;
+    float: left;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.recommendGoods .reTitle {
+    height: 24px;
+    width: 100%;
+    color: #999;
+}
+
+.recommendGoods .reTitle>img {
+    width: 74px;
+    height: 24px;
+    float: left;
+    margin-right: 10px;
+}
+
+.recommendGoods .reTitle>div {
+    float: left;
+}
+
+.recommendGoods .reTitle>div>div {
+    position: relative;
+    float: left;
+}
+
+.recommendGoods .reTitle>div>div:hover div {
+    display: block;
+}
+
+.reTitle>div>div>div {
+    display: none;
+    position: absolute;
+    left: -32px;
+    top: 32px;
+    width: 68px;
+    height: 82px;
+    padding: 10px;
+    background: #eee;
+    z-index: 1000;
+}
+
+.reTitle>div>div>div i {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+}
+
+.reTitle>div>div>div img {
+    width: 66px;
+    height: 66px;
+}
+
+.reTitle>div>div>div em {
+    display: inline-block;
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.reTitle>div>p {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 10px;
+}
+
+.reTitle a {
+    float: right;
+    color: #999;
+}
+
+.reTitle a:hover {
+    color: #f40;
+}
+
+.recommendGoods>a {
+    position: relative;
+    float: left;
+    margin: 20px 10px;
+}
+
+.recommendGoods>a>i {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, .1);
+}
+
+.recommendGoods>a img {
+    width: 200px;
+    height: 200px;
+}
+
+.recommendGoods>a:hover>i {
+    background: rgba(0, 0, 0, .2);
+}
+
+.recommendGoods>a:hover {
+    text-decoration: none;
+}
+
+.recommendGoods>a:hover div h4 {
+    color: #f40;
+}
+
+.recommendGoods>a div h4 {
+    font-size: 16px;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 5px;
+}
+
+.recommendGoods>a div p {
+    line-height: 24px;
+    height: 24px;
+    color: #999;
+    font-size: 16px;
+}
+
+.recommendGoods>a div span {
+    color: #35b1ff;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.recommendGoods>a div span i,
+.recommendGoods>a div span em {
+    margin-right: 5px;
+}
+
+.loveShopping {
+    width: 448px;
+    height: 670px;
+    border: 1px solid #eee;
+    margin-top: 10px;
+    padding: 20px;
+    float: left;
+}
+
+.loveShopping .lsTitle {
+    height: 24px;
+    line-height: 24px;
+}
+
+.loveShopping .lsTitle img {
+    width: 56px;
+    height: 24px;
+    margin-right: 10px;
+    float: left;
+}
+
+.loveShopping .lsTitle p {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    color: #999;
+}
+
+.loveShopping .lsTitle a {
+    color: #999;
+    float: right;
+}
+
+.loveShopping .lsTitle a:hover {
+    color: #f40;
+}
+
+.loveShopping .lsContent {
+    width: 448px;
+    height: 626px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+.loveShopping .lsContent>a {
+    position: relative;
+    width: 200px;
+}
+
+.loveShopping .lsContent>a>img {
+    width: 200px;
+    height: 200px;
+}
+
+.loveShopping .lsContent>a>i {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, .1);
+}
+
+.loveShopping .lsContent>a:hover>i {
+    background: rgba(0, 0, 0, .2);
+}
+
+.loveShopping .lsContent>a:hover {
+    text-decoration: none;
+}
+
+.loveShopping .lsContent>a:hover h4 {
+    color: #f40;
+}
+
+.loveShopping .lsContent>a h4 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #999;
+    margin-top: 5px;
+}
+
+.loveShopping .lsContent>a h4 i {
+    color: #eee;
+}
+
+.loveShopping .lsContent>a p {
+    height: 22px;
+    line-height: 22px;
+    margin-top: 10px
+}
+
+.loveShopping .lsContent>a p img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+}
+
+.loveShopping .lsContent>a p span {
+    float: left;
+    color: #999;
+}
