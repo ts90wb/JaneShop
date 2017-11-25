@@ -933,13 +933,20 @@ li#skin_5.selected {
     color: #f40;
 }
 
-.recommendGoods>a {
+.recontent {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.recontent>a {
     position: relative;
     float: left;
     margin: 20px 10px;
 }
 
-.recommendGoods>a>i {
+.recontent>a .imgWrapper i {
     position: absolute;
     left: 0;
     width: 200px;
@@ -947,46 +954,46 @@ li#skin_5.selected {
     background: rgba(0, 0, 0, .1);
 }
 
-.recommendGoods>a img {
+.recontent>a img {
     width: 200px;
     height: 200px;
 }
 
-.recommendGoods>a:hover>i {
+.recontent>a .imgWrapper:hover i {
     background: rgba(0, 0, 0, .2);
 }
 
-.recommendGoods>a:hover {
+.recontent>a:hover {
     text-decoration: none;
 }
 
-.recommendGoods>a:hover div h4 {
+.recontent>a:hover div h4 {
     color: #f40;
 }
 
-.recommendGoods>a div h4 {
+.recontent>a div h4 {
     font-size: 16px;
     height: 28px;
     line-height: 28px;
     margin-top: 5px;
 }
 
-.recommendGoods>a div p {
+.recontent>a div p {
     line-height: 24px;
     height: 24px;
     color: #999;
     font-size: 16px;
 }
 
-.recommendGoods>a div span {
+.recontent>a div span {
     color: #35b1ff;
     display: inline-block;
     margin-top: 10px;
     font-size: 16px;
 }
 
-.recommendGoods>a div span i,
-.recommendGoods>a div span em {
+.recontent>a div span i,
+.recontent>a div span em {
     margin-right: 5px;
 }
 
@@ -1004,7 +1011,7 @@ li#skin_5.selected {
     line-height: 24px;
 }
 
-.loveShopping .lsTitle img {
+.loveShopping .lsTitle a:nth-child(1) img {
     width: 56px;
     height: 24px;
     margin-right: 10px;
@@ -1018,12 +1025,12 @@ li#skin_5.selected {
     color: #999;
 }
 
-.loveShopping .lsTitle a {
+.loveShopping .lsTitle a:nth-child(3) {
     color: #999;
     float: right;
 }
 
-.loveShopping .lsTitle a:hover {
+.loveShopping .lsTitle a:nth-child(3):hover {
     color: #f40;
 }
 
@@ -1043,12 +1050,12 @@ li#skin_5.selected {
     width: 200px;
 }
 
-.loveShopping .lsContent>a>img {
+.lsContent>a .imgwrapper2 img {
     width: 200px;
     height: 200px;
 }
 
-.loveShopping .lsContent>a>i {
+.lsContent>a .imgwrapper2 i {
     position: absolute;
     left: 0;
     width: 200px;
@@ -1056,7 +1063,7 @@ li#skin_5.selected {
     background: rgba(0, 0, 0, .1);
 }
 
-.loveShopping .lsContent>a:hover>i {
+.lsContent>a .imgwrapper2:hover i {
     background: rgba(0, 0, 0, .2);
 }
 
