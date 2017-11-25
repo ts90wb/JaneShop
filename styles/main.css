@@ -421,6 +421,11 @@ li#skin_5.selected {
     color: #666;
 }
 
+.detail .text-category>div a:hover {
+    color: #f40;
+    text-decoration: none;
+}
+
 .detail .text-category>div a i::before {
     font-size: 12px;
 }
