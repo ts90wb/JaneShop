@@ -1048,6 +1048,7 @@ li#skin_5.selected {
 .loveShopping .lsContent>a {
     position: relative;
     width: 200px;
+    height: 335px;
 }
 
 .lsContent>a .imgwrapper2 img {
