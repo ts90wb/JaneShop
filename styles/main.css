@@ -1140,7 +1140,8 @@ li#skin_5.selected {
     /* text-decoration: none; */
 }
 
-.gdShop .gdContent {
+.gdShop .gdContent,
+.live .liveContent {
     width: 100%;
     margin-top: 10px;
     display: -webkit-flex;
@@ -1149,25 +1150,29 @@ li#skin_5.selected {
     flex-wrap: wrap;
 }
 
-.gdContent a {
+.gdContent a,
+.liveContent a {
     margin-top: 20px;
     width: 205px;
     float: left;
     cursor: pointer;
 }
 
-.gdContent a:hover .subTitle h3 {
+.gdContent a:hover .subTitle h3,
+.liveContent a:hover .lsubTitle h3 {
     color: #f40;
 }
 
-.gdContent .subTitle {
+.gdContent .subTitle,
+.liveContent .lsubTitle {
     float: left;
     width: 100%;
     height: 42px;
     line-height: 42px;
 }
 
-.gdContent .subTitle h3 {
+.gdContent .subTitle h3,
+.liveContent .lsubTitle h3 {
     font-size: 16px;
     color: #333;
     font-weight: 300;
@@ -1175,46 +1180,56 @@ li#skin_5.selected {
     margin-right: 10px;
 }
 
-.gdContent .subTitle p {
+.gdContent .subTitle p,
+.liveContent .lsubTitle p {
     float: left;
     color: #999;
 }
 
-.gdContent .imgList div {
+.gdContent .imgList div,
+.liveContent .limgList div {
     position: relative;
     float: left;
 }
 
-.gdContent .imgList div i {
+.gdContent .imgList div i,
+.liveContent .limgList div>i {
     position: absolute;
     left: 0;
     top: 0;
     background: rgba(0, 0, 0, .1);
 }
 
-.gdContent .imgList div:nth-child(1) i {
+.gdContent .imgList div:nth-child(1) i,
+.liveContent .limgList div:nth-child(1)>i {
     width: 135px;
     height: 135px;
 }
 
 .gdContent .imgList div:nth-child(2) i,
-.gdContent .imgList div:nth-child(3) i {
+.gdContent .imgList div:nth-child(3) i,
+.liveContent .limgList div:nth-child(2)>i,
+.liveContent .limgList div:nth-child(3)>i {
     width: 65px;
     height: 65px;
 }
 
-.gdContent .imgList div:hover i {
+.gdContent .imgList div:hover i,
+.liveContent .limgList div:hover>i {
     background: rgba(0, 0, 0, .2);
 }
 
-.gdContent .imgList div:nth-child(1) img {
+.gdContent .imgList div:nth-child(1) img,
+.liveContent .limgList div:nth-child(1)>img {
     width: 135px;
     height: 135px;
     margin-right: 4px;
 }
 
 .gdContent .imgList div:nth-child(2) img,
-.gdContent .imgList div:nth-child(3) img {
+.gdContent .imgList div:nth-child(3) img,
+.liveContent .limgList div:nth-child(2)>img,
+.liveContent .limgList div:nth-child(3)>img {
     width: 65px;
     height: 65px;
 }
@@ -1238,4 +1253,53 @@ li#skin_5.selected {
 .live .liveTitle p {
     color: #999;
     float: left;
+}
+
+.limgList div:nth-child(1) p {
+    width: 135px;
+    height: 42px;
+    line-height: 42px;
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    bottom: 4px;
+    text-align: center;
+}
+
+.live .liveContent {
+    margin-top: 0;
+}
+
+.limgList div:nth-child(1) p i {
+    float: left;
+    font-size: 34px;
+    color: #FF0040;
+    margin-left: 5px;
+}
+
+.fashion {
+    float: left;
+    width: 658px;
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.fashion h3 {
+    position: relative;
+    text-indent: 15px;
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #AD45Df;
+}
+
+.fashion h3::before {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    height: 16px;
+    width: 100%;
+    content: "";
+    float: left;
+    border-left: 5px solid #8224FD;
 }
