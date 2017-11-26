@@ -1106,7 +1106,8 @@ li#skin_5.selected {
     color: #999;
 }
 
-.gdShop {
+.gdShop,
+.live {
     margin-top: 10px;
     float: left;
     width: 448px;
@@ -1209,11 +1210,32 @@ li#skin_5.selected {
 .gdContent .imgList div:nth-child(1) img {
     width: 135px;
     height: 135px;
-    margin-right: 5px;
+    margin-right: 4px;
 }
 
 .gdContent .imgList div:nth-child(2) img,
 .gdContent .imgList div:nth-child(3) img {
     width: 65px;
     height: 65px;
+}
+
+.live {
+    margin-left: 10px;
+}
+
+.live .liveTitle {
+    height: 24px;
+    line-height: 24px;
+}
+
+.live .liveTitle img {
+    float: left;
+    width: 128px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.live .liveTitle p {
+    color: #999;
+    float: left;
 }
