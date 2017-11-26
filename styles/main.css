@@ -1105,3 +1105,115 @@ li#skin_5.selected {
     float: left;
     color: #999;
 }
+
+.gdShop {
+    margin-top: 10px;
+    float: left;
+    width: 448px;
+    height: 430px;
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.gdShop .gdTitle a:nth-child(1) img {
+    width: 81px;
+    height: 24px;
+    float: left;
+    margin-right: 10px;
+}
+
+.gdShop .gdTitle p {
+    float: left;
+    line-height: 24px;
+    height: 24px;
+    color: #999;
+}
+
+.gdShop .gdTitle a:nth-child(3) {
+    float: right;
+    color: #999;
+}
+
+.gdShop .gdTitle a:nth-child(3):hover {
+    color: #f40;
+    /* text-decoration: none; */
+}
+
+.gdShop .gdContent {
+    width: 100%;
+    margin-top: 10px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gdContent a {
+    margin-top: 20px;
+    width: 205px;
+    float: left;
+    cursor: pointer;
+}
+
+.gdContent a:hover .subTitle h3 {
+    color: #f40;
+}
+
+.gdContent .subTitle {
+    float: left;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+}
+
+.gdContent .subTitle h3 {
+    font-size: 16px;
+    color: #333;
+    font-weight: 300;
+    float: left;
+    margin-right: 10px;
+}
+
+.gdContent .subTitle p {
+    float: left;
+    color: #999;
+}
+
+.gdContent .imgList div {
+    position: relative;
+    float: left;
+}
+
+.gdContent .imgList div i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .1);
+}
+
+.gdContent .imgList div:nth-child(1) i {
+    width: 135px;
+    height: 135px;
+}
+
+.gdContent .imgList div:nth-child(2) i,
+.gdContent .imgList div:nth-child(3) i {
+    width: 65px;
+    height: 65px;
+}
+
+.gdContent .imgList div:hover i {
+    background: rgba(0, 0, 0, .2);
+}
+
+.gdContent .imgList div:nth-child(1) img {
+    width: 135px;
+    height: 135px;
+    margin-right: 5px;
+}
+
+.gdContent .imgList div:nth-child(2) img,
+.gdContent .imgList div:nth-child(3) img {
+    width: 65px;
+    height: 65px;
+}
