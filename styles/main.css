@@ -1279,27 +1279,189 @@ li#skin_5.selected {
 
 .fashion {
     float: left;
-    width: 658px;
+    width: 657px;
     border: 1px solid #eee;
-    padding: 20px;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
-.fashion h3 {
+.fashion h3,
+.quality h3 {
     position: relative;
     text-indent: 15px;
     font-size: 20px;
     height: 20px;
     line-height: 20px;
     color: #AD45Df;
+    padding-left: 20px;
+    margin-bottom: 20px;
 }
 
-.fashion h3::before {
+.fashion h3::before,
+.quality h3::before {
     position: absolute;
-    left: 0;
+    left: 20px;
     top: 2px;
     height: 16px;
     width: 100%;
     content: "";
     float: left;
     border-left: 5px solid #8224FD;
+}
+
+.fashion .fashContent {
+    width: 100%;
+}
+
+.fashion .fashContent .fashItems {
+    float: left;
+    width: 177px;
+    height: 180px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #efe #efe transparent transparent;
+    padding: 20px;
+}
+
+.fashion .fashContent .fashItems:hover {
+    border: 1px solid #f40;
+}
+
+.fashion .fashContent .fashItems>a {
+    display: inline-block;
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    font-size: 18px;
+    color: #333;
+}
+
+.fashion .fashContent .fashItems a:hover {
+    text-decoration: none;
+    color: #f40;
+}
+
+.fashion .fashContent .fashItems p {
+    height: 22px;
+    line-height: 22px;
+    color: #999;
+}
+
+.fashion .fashContent .fashItems div {
+    margin-top: 20px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fashContent .fashItems div a img {
+    width: 80px;
+    height: 80px;
+}
+
+.fashionAd {
+    margin-top: 10px;
+    float: left;
+    width: 321px;
+    height: 284px;
+}
+
+.fashionAd a img {
+    width: 100%;
+    height: 100%;
+}
+
+.quality {
+    padding-top: 20px;
+    width: 988px;
+    height: 656px;
+    border: 1px solid #eee;
+    margin-top: 10px;
+    float: left;
+}
+
+.quality h3 {
+    color: #28ABFF;
+}
+
+.quality h3::before {
+    border-color: #28ABFF;
+}
+
+.quality .quContentLeft {
+    float: left;
+    width: 296px;
+}
+
+.quality .quContentLeft li:hover {
+    border-color: #f40;
+}
+
+.quality .quContentLeft li {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #efe #efe transparent transparent;
+}
+
+.quality .quContentLeft .bImg {
+    width: 254px;
+    padding: 20px;
+}
+
+.quality .quContentLeft .sImg {
+    width: 294px;
+}
+
+.quality .quContentLeft .sImg:hover a {
+    text-decoration: none;
+}
+
+.quality .quContentLeft .sImg a {
+    width: 234px;
+    height: 100px;
+    display: inline-block;
+    padding: 10px 30px;
+}
+
+.quContentLeft .sImg a div {
+    padding-top: 25px;
+    width: 122px;
+    height: 50px;
+    float: left;
+}
+
+.quContentLeft .sImg a p {
+    font-size: 18px;
+    color: #333;
+}
+
+.quContentLeft .sImg a span {
+    color: #999;
+}
+
+.quContentLeft .sImg a img {
+    float: left;
+}
+
+.quContentRight {
+    float: left;
+    width: 684px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.quContentRight li {
+    width: 266px;
+    height: 198px;
+    padding: 20px 15px;
+    border-style: solid;
+}
+
+.wode {
+    height: 500px;
+    width: 300px;
+    float: left;
 }
