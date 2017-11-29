@@ -1287,7 +1287,9 @@ li#skin_5.selected {
 }
 
 .fashion h3,
-.quality h3 {
+.quality h3,
+.sale h3,
+.youLike h3 {
     position: relative;
     text-indent: 15px;
     font-size: 20px;
@@ -1299,7 +1301,9 @@ li#skin_5.selected {
 }
 
 .fashion h3::before,
-.quality h3::before {
+.quality h3::before,
+.sale h3::before,
+.youLike h3::before {
     position: absolute;
     left: 20px;
     top: 2px;
@@ -1588,6 +1592,145 @@ li#skin_5.selected {
     100% {
         opacity: 0;
     }
+}
+
+.sale {
+    float: left;
+    width: 988px;
+    border: 1px solid #eee;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.sale h3 {
+    color: #f40;
+}
+
+.sale h3::before {
+    border-color: #f40;
+}
+
+.sale .saleKeyword {
+    height: 30px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.sale .saleKeyword ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+.sale .saleKeyword ul {
+    height: 100%;
+    width: 100%;
+}
+
+.sale .saleKeyword li>a {
+    color: #999;
+}
+
+.sale .saleKeyword li>a:hover {
+    text-decoration: none;
+    color: #f40;
+}
+
+.sale .saleKeyword i {
+    position: absolute;
+    top: -8px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    margin-right: 15px;
+    color: #ccc;
+}
+
+.sale>ul li {
+    width: 205px;
+    float: left;
+    border-width: 1px;
+    border-color: #efe #efe transparent transparent;
+    border-style: solid;
+    padding: 20px;
+}
+
+.sale>ul li:hover {
+    border-color: #f40;
+}
+
+.sale>ul li:hover a {
+    text-decoration: none;
+}
+
+.sale>ul li>a:nth-child(2) {
+    font-size: 14px;
+    display: inline-block;
+    height: 50px;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+
+.sale>ul li>a:nth-child(2) i {
+    font-size: 30px;
+    color: #71B603;
+    margin-right: 5px;
+}
+
+.sale>ul li>p a {
+    color: #999;
+}
+
+.sale p>a em {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.sale>ul li div {
+    margin-top: 10px;
+}
+
+.sale>ul div span:nth-child(1) {
+    color: #f40;
+}
+
+.sale>ul div em:nth-child(2) {
+    font-size: 22px;
+    color: #f40;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.sale>ul div span:nth-child(3),
+.sale>ul div em:nth-child(4) {
+    text-decoration: line-through;
+}
+
+.sale>ul div>a:nth-child(2) {
+    float: right;
+    height: 33px;
+    line-height: 33px;
+}
+
+.youLike {
+    float: left;
+    width: 988px;
+    border: 1px solid #eee;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.youLike h3 {
+    color: #ff9f00;
+}
+
+.youLike h3::before {
+    border-color: #ff9f00;
+}
+
+.youLike ul li {
+    width: 205px;
+    border-width: 1px;
 }
 
 .wode {
