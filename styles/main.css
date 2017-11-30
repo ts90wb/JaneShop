@@ -1911,35 +1911,35 @@ li#skin_5.selected {
     line-height: 21px;
 }
 
-.footer {
+#footer {
     float: left;
     height: 60px;
     width: 100%;
     background: #eee;
 }
 
-.footer .tFooter {
+#footer .tFooter {
     width: 950px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.footer .tFooter a {
+#footer .tFooter a {
     float: left;
     margin-right: 10px;
 }
 
-.footer .tFooter a:hover {
+#footer .tFooter a:hover {
     text-decoration: none;
     color: #f40;
 }
 
-.footer .tFooter b {
+#footer .tFooter b {
     float: left;
     color: #999;
 }
 
-.footer .tFooter p {
+#footer .tFooter p {
     float: left;
     color: #999;
     margin-left: 20px;
