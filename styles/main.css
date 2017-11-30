@@ -844,6 +844,117 @@ li#skin_5.selected {
     color: #13d0a1;
 }
 
+.fixtool {
+    position: fixed;
+    left: 50%;
+    margin-left: 510px;
+    top: 50px;
+    width: 50px;
+}
+
+.fixtool span {
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    font-size: 30px;
+    color: #f40;
+    z-index: 1;
+}
+
+.fixtool .fixtoolItem {
+    position: absolute;
+    background: #eee;
+    z-index: 100;
+}
+
+.fixtool .fixtoolItem a {
+    position: relative;
+    display: block;
+    height: 44px;
+    padding: 6px 8px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    z-index: 100;
+    background: #eee;
+}
+
+.fixtool div.fixtoolItem a:hover {
+    color: #fff;
+    font-weight: 700;
+    background-image: -webkit-linear-gradient(135deg, #ff971b, #ff5000);
+    background-image: -o-linear-gradient(135deg, #ff971b, #ff5000);
+    background-image: linear-gradient(135deg, #ff971b, #ff5000);
+}
+
+.fixtool .fixtoolItem a::after {
+    content: "";
+    width: 32px;
+    border: 1px solid #ccc;
+    position: absolute;
+    bottom: -1px;
+    left: 8px;
+    z-index: 1;
+}
+
+.fixtool .fixtoolItem a:hover::after {
+    bottom: -2px;
+}
+
+.fixtool .fixtoolItem a:nth-child(1) {
+    color: #f40;
+    border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    -ms-border-radius: 6px 6px 0 0;
+    -o-border-radius: 6px 6px 0 0;
+}
+
+.fixtool .fixtoolItem a:nth-child(2) {
+    color: #f05;
+}
+
+.fixtool .fixtoolItem a:nth-child(3) {
+    color: #8d7afb;
+}
+
+.fixtool .fixtoolItem a:nth-child(4) {
+    color: #A8C001;
+}
+
+.fixtool .fixtoolItem a:nth-child(5) {
+    color: #f40;
+}
+
+.fixtool .fixtoolItem a:nth-child(6) {
+    line-height: 22px;
+}
+
+.fixtool .fixtoolItem a:nth-child(6) i {
+    display: block;
+    transform: rotateZ(-90deg);
+    -webkit-transform: rotateZ(-90deg);
+    -moz-transform: rotateZ(-90deg);
+    -ms-transform: rotateZ(-90deg);
+    -o-transform: rotateZ(-90deg);
+}
+
+.fixtool .fixtoolItem a:nth-child(7) {
+    line-height: 44px;
+}
+
+.fixtool .fixtoolItem a:nth-child(8) {
+    border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    -ms-border-radius: 0 0 6px 6px;
+    -o-border-radius: 0 0 6px 6px;
+}
+
+.fixtool .fixtoolItem a:nth-child(8)::after {
+    border: none;
+}
+
 .recommendGoods {
     width: 448px;
     height: 670px;
