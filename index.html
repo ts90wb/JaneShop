@@ -8,6 +8,7 @@
     <title>JaneShop</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_479150_yn3v0xine6zuxr.css">
+    <link rel="stylesheet" href="./styles/skin/skin_0.css" id="cssfile">
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
@@ -18,7 +19,7 @@
                 <img src="./images/logo.gif" alt="JaneShop">
             </a>
             <div class="search">
-                <input type="text" placeholder="请输入商品名">
+                <input type="text" placeholder="请输入商品名按回车提交操作">
             </div>
             <ul class="skin">
                 <li id="skin_0" class="selected"></li>
@@ -4171,10 +4172,10 @@
                     <a href=""><img src="./images/ads/5.jpg" alt="春季大促"></a>
                 </div>
                 <div class="textGuide">
-                    <a class="current" href=""><i></i><span>相约情人节</span><span>全场119元起</span></a>
-                    <a href=""><i></i><span>新款上线</span><span>全场357元起</span></a>
+                    <a href="" class="current"><i></i><span>新款上线</span><span>全场357元起</span></a>
+                    <a href=""><i></i><span>相约情人节</span><span>全场119元起</span></a>
                     <a href=""><i></i><span>愤怒小鸟特卖</span><span>全场89元起</span></a>
-                    <a href=""><i></i><span>男鞋促销</span><span>全场3.1折起</span></a>
+                    <a href=""><i></i><span>女高跟鞋促销</span><span>全场3.8折起</span></a>
                     <a href=""><i></i><span>春季新品发布会</span><span>全场3.8折起</span></a>
                 </div>
             </div>
@@ -4187,19 +4188,21 @@
                         <span title="最新动态">最新动态</span>
                         <a href="">更多&gt</a>
                     </div>
-                    <ul class="textScroll">
-                        <li><a href="" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
-                        <li><a href="" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
-                        <li><a href="" class="tooltip" title="[活动] COEY秋冬新品全场2.3折起">[活动] COEY秋冬新品全场2.3折起</a></li>
-                        <li><a href="" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
-                        <li><a href="" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
-                        <li><a href="" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
-                        <li><a href="" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
-                        <li><a href="" class="tooltip" title="[活动] COEY秋冬新品全场2.3折起">[活动] COEY秋冬新品全场2.3折起</a></li>
-                        <li><a href="" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
-                        <li><a href="" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
+                    <div class="aniwrap">
+                        <ul class="textScroll">
+                            <li><a href="" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
+                            <li><a href="" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
+                            <li><a href="" class="tooltip" title="[活动] COEY秋冬新品全场2.3折起">[活动] COEY秋冬新品全场2.3折起</a></li>
+                            <li><a href="" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
+                            <li><a href="" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
+                            <li><a href="" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
+                            <li><a href="" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
+                            <li><a href="" class="tooltip" title="[活动] COEY秋冬新品全场2.3折起">[活动] COEY秋冬新品全场2.3折起</a></li>
+                            <li><a href="" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
+                            <li><a href="" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="jnBrand">
@@ -5039,6 +5042,10 @@
 
         </div>
     </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./scripts/jquery.cookie.js"></script>
+    <script src="./scripts/layer.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
