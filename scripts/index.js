@@ -22,6 +22,10 @@ $(function() {
             };
         });
     })();
+    //滚动搜索框
+    (function() {
+        $(window).scro
+    })();
     //网页换肤
     (function() {
         var $li = $(".skin li");

@@ -7,6 +7,100 @@
         height: 105px;
     }
     
+    #header .searchFloat {
+        display: none;
+        z-index: 1100;
+        width: 100%;
+        height: 50px;
+        background: #fff;
+        position: fixed;
+    }
+    
+    .searchFloat .sfWrap {
+        position: absolute;
+        left: 50%;
+        margin-left: -495px;
+        width: 990px;
+        height: 50px;
+    }
+    
+    .searchFloat .sfWrap a {
+        float: left;
+        width: 149px;
+        height: 50px;
+    }
+    
+    .searchFloat .sfWrap p {
+        float: left;
+        width: 180px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 14px;
+        color: #999;
+    }
+    
+    .searchFloat .sfWrap a img {
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+    }
+    
+    .searchFloat .sfWrap .fsearchWrap {
+        width: 300px;
+        height: 42px;
+        margin: 4px auto;
+    }
+    
+    .searchFloat .sfWrap .fsearchWrap .fsearch {
+        float: right;
+        width: 250px;
+        height: 42px;
+        position: relative;
+    }
+    
+    .sfWrap .fsearchWrap .fsearch input {
+        width: 0;
+        height: 100%;
+        padding: 0 29px 0 15px;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 2px solid transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1302;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+    
+    .sfWrap .fsearchWrap .fsearch .fsubmit {
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        text-align: center;
+        background: rgba(0, 0, 0, .05);
+        border-radius: 5px 5px 0 0;
+        border: 1px solid #eee;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1301;
+    }
+    
+    .fsearchWrap .fsearch .fsubmit i {
+        font-size: 24px;
+    }
+    
+    .sfWrap .fsearchWrap .fsearch input:focus {
+        border-bottom: 2px solid #41F86F;
+        width: 300px;
+    }
+    
     #header .contWidth {
         width: 990px;
         height: 100%;
@@ -21,14 +115,16 @@
         line-height: 80px;
     }
     
-    .contWidth .search {
+    .contWidth .searchWrap {
+        width: 300px;
+        height: 34px;
         position: absolute;
-        left: 198px;
+        left: 300px;
         top: 20px;
     }
     
-    .contWidth .search form {
-        position: relative;
+    .contWidth .search {
+        float: right;
     }
     
     .contWidth .search input {
@@ -38,6 +134,7 @@
         padding: 5px 15px;
         background: #F9F0DA;
         border-radius: 42px;
+        transition: .3s linear;
     }
     
     .contWidth .search div {
@@ -51,6 +148,7 @@
     
     .contWidth .search input:focus {
         outline: none;
+        width: 300px;
     }
     
     .skin {
