@@ -6,8 +6,12 @@
 $(function() {
     //搜索输入框
     (function() {
-        $("#header .search").keyup(function(e) {
+        $('form.search').on('submit', function(event) {
+            event.preventDefault();
+        });
+        $("#header .search input").keyup(function(e) {
             if (e.which == 13) {
+                console.log(1);
                 layer.open({
                     title: false,
                     type: 3,
@@ -111,7 +115,51 @@ $(function() {
         var page = 0,
             i = 4;
         var c_content = $(".jnBrandContent");
+        var c_show = $(".jnBrandList");
+        var c_width = c_content.width();
+        var page_count = Math.ceil((c_show.find("li").length) / i);
+        var c_tip = $(".jnBrandTab ul").find("a");
+        var timer = null;
 
+        function autoplay() {
+            timer = window.setInterval(right, 3000);
+
+        }
+        autoplay();
+
+        function right() {
+            if (!c_show.is(":animated")) {
+                c_show.animate({ left: "-=" + c_width }, function() {
+                    page++;
+                    if (page == (page_count - 2)) {
+                        c_show.css({
+                            left: -c_width
+                        });
+                        page = 0;
+                    }
+                    selectTip();
+                })
+            }
+        };
+
+        function selectTip() {
+            c_tip.eq(page).addClass('current').parent().siblings().children().removeClass("current");
+
+        };
+        $(".jnBrand").hover(function() {
+            clearInterval(timer);
+        }, function() {
+            autoplay();
+        });
+        c_tip.click(function() {
+            var index = $(this).parent().index();
+            c_show.animate({
+                left: -(index + 1) * c_width
+            });
+            page = index;
+            selectTip();
+            return false;
+        });
 
     })();
 });

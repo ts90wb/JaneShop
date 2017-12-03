@@ -27,10 +27,30 @@
         top: 20px;
     }
     
+    .contWidth .search form {
+        position: relative;
+    }
+    
     .contWidth .search input {
-        width: 260px;
+        width: 250px;
         height: 20px;
-        padding: 5px;
+        border: 2px solid #324b4e;
+        padding: 5px 15px;
+        background: #F9F0DA;
+        border-radius: 42px;
+    }
+    
+    .contWidth .search div {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 5px;
+        right: 4px;
+        cursor: pointer;
+    }
+    
+    .contWidth .search input:focus {
+        outline: none;
     }
     
     .skin {
@@ -751,9 +771,9 @@
     
     .jnBrand .jnBrandContent .jnBrandList {
         position: absolute;
-        left: 0;
+        left: -790px;
         top: 0;
-        width: 3200px;
+        width: 4800px;
     }
     
     .jnBrand .jnBrandContent .jnBrandList li {
