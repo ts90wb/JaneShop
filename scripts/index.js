@@ -9,7 +9,43 @@ $(function() {
         $('form.search').on('submit', function(event) {
             event.preventDefault();
         });
+
+
         $("#header .search input").keyup(function(e) {
+            if (e.which == 13) {
+                layer.open({
+                    title: false,
+                    type: 3,
+                    content: '',
+                    time: 1000
+                });
+
+            };
+        });
+        $("#header .search .submit").click(function() {
+            layer.open({
+                title: false,
+                type: 3,
+                content: '',
+                time: 1000
+            });
+        });
+    })();
+    //滚动搜索框
+    (function() {
+        $(window).scroll(function() {
+            var top = $(this).scrollTop();
+            var sFloat = $("#header .searchFloat");
+            if (top >= 100) {
+                sFloat.show(1000);
+            } else {
+                sFloat.hide();
+            }
+        });
+        $('form.fsearch').on('submit', function(event) {
+            event.preventDefault();
+        });
+        $("#header .fsearch input").keyup(function(e) {
             if (e.which == 13) {
                 console.log(1);
                 layer.open({
@@ -21,10 +57,6 @@ $(function() {
 
             };
         });
-    })();
-    //滚动搜索框
-    (function() {
-        $(window).scro
     })();
     //网页换肤
     (function() {
