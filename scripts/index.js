@@ -10,7 +10,6 @@ $(function() {
             event.preventDefault();
         });
 
-
         $("#header .search input").keyup(function(e) {
             if (e.which == 13) {
                 layer.open({
@@ -47,7 +46,6 @@ $(function() {
         });
         $("#header .fsearch input").keyup(function(e) {
             if (e.which == 13) {
-                console.log(1);
                 layer.open({
                     title: false,
                     type: 3,
@@ -56,6 +54,27 @@ $(function() {
                 });
 
             };
+        });
+    })();
+    //右侧导航条
+    (function() {
+        $(window).scroll(function() {
+            var top = $(this).scrollTop();
+            var fixTool = $("#content .fixtool");
+            var topArr = fixTool.find(".fixtoolItem a:nth-child(6)");
+            if (top >= 300) {
+                fixTool.animate({ top: "80px" });
+
+                topArr.stop().show(1000);
+
+            } else {
+                fixTool.stop(true).animate({ top: "300px" });
+                // topArr.stop().animate({ "display": "none" }, 1000);
+                topArr.stop().hide(1000, function() {
+                    $(this).css("display", "none");
+                });
+
+            }
         });
     })();
     //网页换肤
