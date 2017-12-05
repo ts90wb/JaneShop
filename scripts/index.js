@@ -60,21 +60,33 @@ $(function() {
     (function() {
         $(window).scroll(function() {
             var top = $(this).scrollTop();
+            var nTop = 950,
+                i = Math.floor((top - 100) / nTop);
             var fixTool = $("#content .fixtool");
             var topArr = fixTool.find(".fixtoolItem a:nth-child(6)");
             if (top >= 300) {
                 fixTool.animate({ top: "80px" });
 
-                topArr.stop().show(1000);
+                topArr.stop().show(500);
 
             } else {
                 fixTool.stop(true).animate({ top: "300px" });
                 // topArr.stop().animate({ "display": "none" }, 1000);
-                topArr.stop().hide(1000, function() {
+                topArr.stop().hide(500, function() {
                     $(this).css("display", "none");
                 });
 
             }
+            if (i <= 4 && i >= 0) {
+                fixTool.find(".fixtoolItem a").eq(i).addClass("current").siblings().removeClass('current');
+
+            }
+            topArr.click(function() {
+                $("body,html").animate({ scrollTop: 0 }, 1000, function() {
+                    $(this).stop(true);
+                });
+                return false;
+            })
         });
     })();
     //网页换肤

@@ -1018,7 +1018,8 @@
         background: #eee;
     }
     
-    .fixtool div.fixtoolItem a:hover {
+    .fixtool div.fixtoolItem a:hover,
+    .fixtool div.fixtoolItem a.current {
         color: #fff;
         font-weight: 700;
         background-image: -webkit-linear-gradient(135deg, #ff971b, #ff5000);
@@ -1036,7 +1037,8 @@
         z-index: 1;
     }
     
-    .fixtool .fixtoolItem a:hover::after {
+    .fixtool .fixtoolItem a:hover::after,
+    .fixtool .fixtoolItem a.current {
         bottom: -2px;
     }
     
