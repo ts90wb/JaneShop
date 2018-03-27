@@ -3,9 +3,18 @@
  *day:2017-11-30
  */
 
-$(function() {
-    //搜索输入框
-    (function() {
+(function($) {
+    $(function() {
+        mainSlide();
+        scrollText();
+        brandsSlide();
+        fixedSearch();
+        scrollSearch();
+        rightSlider();
+        switchNav();
+    });
+    //顶部搜索输入框
+    function scrollSearch() {
         $('form.search').on('submit', function(event) {
             event.preventDefault();
         });
@@ -29,9 +38,9 @@ $(function() {
                 time: 1000
             });
         });
-    })();
+    };
     //滚动搜索框
-    (function() {
+    function fixedSearch() {
         $(window).scroll(function() {
             var top = $(this).scrollTop();
             var sFloat = $("#header .searchFloat");
@@ -55,9 +64,9 @@ $(function() {
 
             };
         });
-    })();
+    };
     //右侧导航条
-    (function() {
+    function rightSlider() {
         $(window).scroll(function() {
             var top = $(this).scrollTop();
             var nTop = 950,
@@ -88,9 +97,9 @@ $(function() {
                 return false;
             })
         });
-    })();
+    };
     //网页换肤
-    (function() {
+    function switchNav() {
         var $li = $(".skin li");
         $li.click(function() {
             switchSkin(this.id);
@@ -105,9 +114,9 @@ $(function() {
             $("#cssfile").attr('href', './styles/skin/' + skinName + ".css");
             $.cookie("MyCssSkin", skinName, { path: '/', expires: 10 });
         };
-    })();
+    };
     //主广告轮播
-    (function() {
+    function mainSlide() {
         var index = 0;
         var adTimer = null;
         var $textGuide = $(".jnImagescroll .textGuide a");
@@ -132,9 +141,9 @@ $(function() {
                 if (index == $textGuide.length) { index = 0; };
             }, 3000);
         }).trigger("mouseleave");
-    })();
+    };
     //最新动态自制提示及滚动效果
-    (function() {
+    function scrollText() {
         var x = 10;
         var y = 20;
         var $text = $(".jnNoticeInfo .textScroll");
@@ -176,9 +185,9 @@ $(function() {
         }, function() {
             textMove();
         }).trigger("mouseleave");
-    })();
+    };
     //品牌图轮播效果
-    (function() {
+    function brandsSlide() {
         var page = 0,
             i = 4;
         var c_content = $(".jnBrandContent");
@@ -228,5 +237,5 @@ $(function() {
             return false;
         });
 
-    })();
-});
+    };
+})(jQuery);

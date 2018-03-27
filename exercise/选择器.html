@@ -1,0 +1,102 @@
+<!DOCTYPE html >
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 选择器 </title>
+
+</head>
+
+<body>
+    <h1>234</h1>
+    <p>这个跟下面一样</p>
+    <div class="sibling">宽200 高200</div>
+    <div class="parent">
+        <div class="first-child">
+            <div class="grandson">
+
+            </div>
+            <span class="brother">同级后面都变颜色</span>
+            <span class="brother">同级后面都变颜色</span>
+        </div>
+        <div class="sec-child">
+
+        </div>
+    </div>
+    <h5>678</h5>
+    <ul class="list">
+        <li class="item1">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <p class="compare">你在么</p>
+    <form action="">
+        <input type="text">
+        <input type="text">
+    </form>
+    <ruby><rt>注释内容</rt><rp>浏览器不支持时如何显示</rp></ruby>
+    <details></details>
+    <select name="" id="mul" multiple="mutiple">
+        <option value="1"></option>
+        <option value="2"></option>
+    </select>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(function() {
+        // $('p+.sibling,p').width(200).height(200).css('background', 'red');
+        // $('.parent .first-child>.grandson~.brother').css({
+        //     'display': 'block',
+        //     'width': '30px',
+        //     'height': '30px',
+        //     'font-size': '12px',
+        //     'background': 'blue'
+        // });
+        // $('.list li:first').width(200).height(200).css('background', 'red');
+        // $('p:not(.compare)').width(200).height(200).css('background', 'red');
+        // $('.list li:even').width(200).height(200).css('background', 'red');//索引为偶数
+        // $('.list li:odd').width(200).height(200).css('background', 'red');//索引为奇数
+        // $('.list li:eq(1)').width(200).height(200).css('background', 'red');
+        // $('.list li:gt(1)').width(200).height(200).css('background', 'red');
+        // $('.list li:gt(1)').width(200).height(200).css('background', 'red');//小于:lt
+        // $(':header').width(200).height(200).css('background', 'red');
+        // console.log($('p').text('我在'));
+        // console.log($('input').val('在哪'));
+        // $('.list li:eq(1)').addClass('item1 sec');
+        // $('.list li:first').removeClass(function() {
+        //     return $(this).next().attr('class');
+        // });
+
+
+    });
+
+    /*  
+    全排列（递归链接）算法  
+    1、设定源数组为输入数组，结果数组存放排列结果（初始化为空数组）；  
+    2、逐一将源数组的每个元素链接到结果数组中（生成新数组对象）；  
+    3、从原数组中删除被链接的元素（生成新数组对象）；  
+    4、将新的源数组和结果数组作为参数递归调用步骤2、3，直到源数组为空，则输出一个排列。  
+    */
+    // var count = 0;
+
+    // function show(arr) {
+    //     document.write("P<sub>" + ++count + "</sub>: " + arr + "<br />");
+    // }
+
+    // function perm(arr) {
+    //     (function fn(source, result) {
+    //         if (source.length == 0)
+    //             show(result);
+    //         else
+    //             for (var i = 0; i < source.length; i++)
+    //                 fn(source.slice(0, i).concat(source.slice(i + 1)), result.concat(source[i]));
+    //     })(arr, []);
+    // }
+    // perm(["01", "02", "03", "04"]);
+</script>
+
+</html>
