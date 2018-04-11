@@ -1,0 +1,60 @@
+<!DOCTYPE html >
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 大图跟随效果 </title>
+    <style>
+        .follow {
+            position: relative;
+            width: 180px;
+            height: 180px;
+        }
+        
+        .follow .middle {
+            width: 180px;
+            height: 180px;
+        }
+        
+        .follow .big {
+            display: none;
+            position: absolute;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="follow">
+        <img class="middle" src="./middle.webp" alt="">
+        <img class="big" src="./big.jpg" alt="">
+    </div>
+
+</body>
+<script>
+    let oMid = document.querySelector('.middle');
+    let oBig = document.querySelector('.big');
+    let oFollow = document.querySelector('.follow');
+    oFollow.onmouseenter = function(e) {
+        oBig.style.display = 'block';
+        oFollow.onmousemove = function(e) {
+            e = e || window.e;
+            let mLeft = e.clientX - oMid.offsetLeft;
+            let mTop = e.clientY - oMid.offsetTop;
+            oBig.style.left = mLeft + 'px';
+            oBig.style.top = mTop + 'px';
+        }
+
+    }
+    oFollow.onmouseleave = function(e) {
+        oFollow.onmousemove = null;
+        oBig.style.display = 'none';
+        e.preventDefault();
+    }
+</script>
+
+</html>

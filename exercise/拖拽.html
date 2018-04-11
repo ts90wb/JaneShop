@@ -1,0 +1,59 @@
+<!DOCTYPE html >
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Document </title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #aaa;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+<script>
+    let oBox = document.getElementsByClassName('box')[0];
+    let clientW = document.body.clientWidth || document.documentElement.clientWidth;
+    let clientH = document.body.clientHeight || document.documentElement.clientHeight;
+    oBox.onmousedown = function(e) {
+        e = e || window.e;
+        e.target = e.target || e.srcElement;
+        let iLeft = e.clientX - e.target.offsetLeft;
+        let iTop = e.clientY - e.target.offsetTop;
+        document.onmousemove = function(e) {
+            e = e || window.e;
+            e.target = e.target || e.srcElement;
+            let mLeft = e.clientX - iLeft;
+            let mTop = e.clientY - iTop;
+
+            (mLeft <= 0) ? mLeft = 0: null;
+            (mTop <= 0) ? mTop = 0: null;
+            (mLeft >= clientW - oBox.offsetWidth) ? mLeft = (clientW - oBox.offsetWidth): null;
+            (mTop >= clientH - oBox.offsetHeight) ? mTop = (clientH - oBox.offsetHeight): null;
+            oBox.style.top = mTop + 'px';
+            oBox.style.left = mLeft + 'px';
+
+        }
+        document.onmouseup = function(e) {
+            document.onmousemove = null;
+            e.preventDefault();
+        }
+    }
+</script>
+
+</html>

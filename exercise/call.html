@@ -1,0 +1,124 @@
+<!DOCTYPE html >
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Document </title>
+
+</head>
+
+<body>
+
+</body>
+<script>
+    // function searchNum(input, ary) {
+    //     let result, newAry = [];
+    //     ary.forEach(ele => {
+    //         result = ele.some(item => item == input);
+    //         newAry.push(result);
+    //     });
+    //     result = newAry.some(item => item);
+    //     return result;
+    // }
+    // function searchNum(input, ary) {
+    //     let str = ary.join(',');
+    //     let result = str.indexOf(input);
+    //     if (result > -1) {
+    //         result = true;
+    //     } else {
+    //         result = false;
+    //     }
+    //     return result;
+    // }
+    // console.log(searchNum(7, [
+    //     [4, 36],
+    //     [1, 41]
+    // ]));
+    // let ary = [1, 9, 5, 4, 5];
+    // console.log(ary.sort(function() {
+    //     return 1;
+    // }));
+    // var aryNew = [{
+    //     name: '赵煊1',
+    //     age: 11
+    // }, {
+    //     name: '美女2',
+    //     age: 12
+    // }, {
+    //     name: '帅哥3',
+    //     age: 13
+    // }, {
+    //     name: '啊哥3',
+    //     age: 23
+    // }, {
+    //     name: '啊妹4',
+    //     age: 14
+    // }, {
+    //     name: '丽媛5',
+    //     age: 15
+    // }];
+    // var theAry = aryNew.sort(function(a, b) {
+    //     return a.name.localeCompare(b.name)
+    // });
+    // console.log(theAry);
+    // try {
+    //     console.log(num);
+    // } catch (e) {
+    //     console.log(e.message);
+    //     throw new Error('你长的')
+    // } finally {
+    //     console.log('dou')
+    // }
+    // function toAry(likeAry) {
+    //     let ary = [];
+    //     for (let i = 0, len = likeAry.length; i < len; i++) {
+    //         ary.push(likeAry[i]);
+    //     }
+    //     return ary;
+    // }
+    // console.log(toAry([1, 2, 3]));
+    // function JSONParse(str) {
+    //     var val;
+
+
+
+    //     val = eval("(" + str + ")");
+
+    //     return val;
+
+    // }
+
+    // console.log(JSONParse('{ "name": "cxh", "sex": "man" }'));
+    // var reg = /(\d{3})(\d{3})(\d{4})(\d{4})(\d{3})(?:\d|X)/;
+    // console.log(reg.exec("130635199112012413"));
+    // console.log(reg.test("130635199112012413"));
+    //==============
+    // let reg = /\d+/g;
+    // let str = '100per6543pew';
+
+    // function muster(reg, str) {
+    //     let res = reg.exec(str);
+    //     let ary = [];
+    //     while (res) {
+    //         ary.push(res[0]);
+
+    //         res = reg.exec(str);
+
+    //     }
+    //     return ary;
+    // }
+    // console.log(muster(reg, str));
+    //===================\
+    var ary1 = ['零', '壹', '貮', '叁', '肆', '伍', '陆', '柒', '捌', '玖'];
+    var reg1 = /\d/g;
+    var str1 = '19911106';
+    console.log(str1.replace(reg1, function() {
+        // console.dir(arguments[0]);
+        console.dir(arguments);
+        return ary1[arguments[0]]
+    }));
+</script>
+
+</html>

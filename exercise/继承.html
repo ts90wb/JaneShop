@@ -1,0 +1,202 @@
+<!DOCTYPE html >
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 继承 </title>
+
+</head>
+
+<body>
+
+</body>
+<script>
+    //对象冒充继承
+    // function classP(str) {
+    //     this.name = str;
+    //     this.sayName = function() {
+    //         console.log(this.name);
+    //     }
+    // }
+    // classP.prototype.pub = function() {
+    //     console.log(1);
+    // }
+
+    // function classS(str) {
+    //     this.newM = classP;
+    //     this.newM(str); //传入参数
+    //     delete this.newM;
+
+    // }
+    // let P = new classP('json');
+    // let S = new classS('txt');
+    // console.log(P.sayName(), S.sayName());
+    // console.log(P.name, S.name);
+    // console.log(P.pub(), S.pub());//超类公有方法无法继承
+
+    //call apply继承
+    // function classP(str) {
+    //     this.name = str;
+    //     this.sayName = function() {
+    //         console.log(this.name);
+    //     }
+    // }
+    // classP.prototype.pub = function() {
+    //     console.log(1);
+    // }
+
+    // function classS(str) {
+    //     classP.call(this, str);
+    // }
+    // let P = new classP('json');
+    // let S = new classS('txt');
+    // console.log(P.sayName(), S.sayName());
+    // console.log(P.name, S.name);
+    // console.log(P.pub(), S.pub()); //超类公有方法无法继承
+    //apply=============
+    // function classP(str) {
+    //     this.name = str;
+    //     this.sayName = function() {
+    //         console.log(this.name);
+    //     }
+    // }
+    // classP.prototype.pub = function() {
+    //     console.log(1);
+    // }
+
+    // function classS(str) {
+    //     classP.apply(this, arguments);
+    // }
+    // let P = new classP('json');
+    // let S = new classS('txt');
+    // console.log(P.sayName(), S.sayName());
+    // console.log(P.name, S.name);
+    // console.log(P.pub(), S.pub()); //超类公有方法无法继承
+
+    //原型链继承
+    // function Parent(str) {
+    //     this.name = str;
+    //     this.sayName = function() {
+    //         console.log(this.name);
+    //     }
+    // }
+    // Parent.prototype.pub = function() {
+    //     console.log(1);
+    // }
+
+    // function Son(str) {
+
+    // }
+    // Son.prototype = new Parent();
+    // let P = new Parent('json');
+    // let S = new Son('txt');
+    // console.log(P.sayName(), S.sayName());
+    // console.log(P.name, S.name);
+    // console.log(P.pub(), S.pub());
+    // 无法继承超类的私有属性
+
+    //组合继承
+    // function Parent(str) {
+    //     this.name = str;
+    //     this.sayName = function() {
+    //         console.log(this.name);
+    //     }
+
+    // }
+    // Parent.prototype.pub = function() {
+    //     console.log(1);
+    // }
+
+    // function Son(str) {
+    //     Parent.call(this, str);
+    // }
+    // Son.prototype = new Parent();
+    // const S = new Son('text');
+    // const P = new Parent('Pare');
+    // console.log(P.sayName(), S.sayName());
+    // console.log(P.name, S.name);
+    // console.log(P.pub(), S.pub());
+
+    //寄生组合继承
+    // function beget(obj) { // 生孩子函数 beget：龙beget龙，凤beget凤。
+    //     var F = function() {};
+    //     F.prototype = obj;
+    //     return new F();
+    // }
+
+    // function Super() {
+    //     // 只在此处声明基本属性和引用属性
+    //     this.val = 1;
+    //     this.arr = [1];
+    // }
+    // //  在此处声明函数
+    // Super.prototype.fun1 = function() {};
+    // Super.prototype.fun2 = function() {};
+    // //Super.prototype.fun3...
+    // function Sub() {
+    //     Super.call(this); // 核心
+    //     // ...
+    // }
+    // var proto = beget(Super.prototype); // 核心
+    // console.log(proto);
+    // proto.constructor = Sub; // 核心
+    // Sub.prototype = proto; // 核心
+
+    // var sub = new Sub();
+    // alert(sub.val);
+    // alert(sub.arr);
+
+
+    // function beget(obj) {
+    //     var F = function() {};
+    //     F.prototype = obj;
+    //     return new F()
+    // };
+
+    // function Parent(str) {
+    //     this.name = str;
+    //     this.sayName = function() {
+
+    //     }
+    // }
+
+    // function Son(str) {
+    //     Parent.call(this, str);
+    // }
+    // var proto = beget(new Parent());
+    // proto.constructor = Son;
+    // Son.prototype = proto;
+
+    //es6 
+    class Parent {
+        constructor(str) {
+            this.name = str;
+            this.sayName = function() {
+                console.log(this.name);
+            }
+        }
+        fn(age) {
+            console.log(age);
+        }
+        static fn1() {
+            console.log(1);
+        }
+    }
+
+    class Son extends Parent {
+        constructor(val) {
+            super(val);
+        }
+
+        fnSon(b) {
+            return super.fn(b);
+        }
+    }
+    let par = new Parent();
+    let son = new Son('wo');
+    console.log(son.fn(12), son.fnSon(13), son.name, Parent.fn1(), Son.fn1());
+</script>
+
+</html>

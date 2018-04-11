@@ -6,12 +6,20 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> 选择器 </title>
+    <style>
+        P:nth-child(1) {
+            height: 1000px;
+        }
+    </style>
 
 </head>
 
 <body>
+    <p class="btn"><b>跟下面一样</b> </p>
     <h1>234</h1>
-    <p>这个跟下面一样</p>
+    <h1>234</h1>
+    <h1>234</h1>
+    <h1>234</h1>
     <div class="sibling">宽200 高200</div>
     <div class="parent">
         <div class="first-child">
@@ -27,27 +35,30 @@
     </div>
     <h5>678</h5>
     <ul class="list">
-        <li class="item1">1</li>
+        <li class="item1"> 1</li>
         <li>2</li>
         <li>3</li>
         <li>4</li>
         <li>5</li>
     </ul>
-    <p class="compare">你在么</p>
     <form action="">
         <input type="text">
         <input type="text">
     </form>
     <ruby><rt>注释内容</rt><rp>浏览器不支持时如何显示</rp></ruby>
     <details></details>
-    <select name="" id="mul" multiple="mutiple">
-        <option value="1"></option>
-        <option value="2"></option>
+    <select name="" id="mul">
+      
     </select>
+    <p class="compare">你在么</p>
+    <a href="http://www.baidu.com" target="_blank">去别的页面</a>
+
 </body>
 <script src="jquery-3.3.1.min.js"></script>
 <script>
     $(function() {
+        // console.log($('.grandson').parent());
+        // console.log($('.grandson').parents());
         // $('p+.sibling,p').width(200).height(200).css('background', 'red');
         // $('.parent .first-child>.grandson~.brother').css({
         //     'display': 'block',
@@ -72,8 +83,65 @@
         // });
 
 
+        //css 
+        // $('h5').css('background', 'red').click(function() {
+        //         $(this).css({
+        //             'height': function(index, val) {
+        //                 return parseFloat(val) * 1.2;
+        //             }
+
+        //         })
+        //     })
+        // console.log($("p").width());//获取p的宽度
+        // $('p').css('background', 'red').width(function(index, oldH) {
+        //     return oldH;
+        // });//适应屏幕宽度
+        // var p = $('p:first').css({
+        //     'height': '50px',
+        //     'line-height': '50px',
+        //     'margin': '10px',
+        //     'padding': '10px',
+        //     'border': '10px solid #fff'
+        // });
+        // $('p:last').text('' + p.innerHeight() + p.outerHeight());
+        // var $h = $('h5').offset();
+        // console.log($h.left + ' ' + $h.top);
+        // $('h5').offset({
+        //     top: 0,
+        //     left: 0
+        // });
+        // $(window).scrollTop(1000);
+
+        //=============
+        // const ary = [1, 2, 3];
+        // const $mul = $('#mul');
+        // let str;
+        // $mul.width(200);
+        // $.each(ary, function(index, item) {
+        //     $mul.append((index == 1 ? '<option selected = "selected">' : '<option>') + item + '</option>');
+        // });
+        // $mul.find('option:selected').append('<i>✔</i>');
+        // $mul.change(function() {
+        //     $(this).find('option:selected').append('<i>✔</i>').siblings().find('i').remove();
+        // });
+
+        // $('input:text').val(function() {
+        //     return this.value + ' ' + this.className;
+        // });
+        // $('h5').toggle('slow');
+        //===================\
+        // $('p').appendTo('h1');
+
+        // $('.btn').click(function() {
+        //     $(this).clone(true).insertAfter(this);
+        // });
+
     });
 
+    // window.onbeforeunload = function(e) {
+
+    //         return 'msg';
+    //     }
     /*  
     全排列（递归链接）算法  
     1、设定源数组为输入数组，结果数组存放排列结果（初始化为空数组）；  
@@ -97,6 +165,27 @@
     //     })(arr, []);
     // }
     // perm(["01", "02", "03", "04"]);
+    // class Parent {
+    //     constructor() {
+    //             this.fn = () => {}
+    //         }
+    //         //Parent.prototype
+    //     fn1() {
+
+    //         }
+    //         //Parent own property  Parent.fn2()
+    //     static fn2() {}
+    // }
+    //================================================
+    // function al() {
+    //     console.log('haha');
+    // }
+    // window.onbeforeunload = function(e) {
+    //     al();
+    //     var dialogText = 'Dialog text here';
+    //     e.returnValue = dialogText;
+    //     return dialogText;
+    // };
 </script>
 
 </html>
